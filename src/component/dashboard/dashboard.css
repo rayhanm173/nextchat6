@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+.separator{
+    height: 80%;
+    width: 2px;
+    background-color: #dddddd35;
+}
+
+@media (max-width: 1024px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .separator{
+        width: 80%;
+        height: 2px;
+    }
+}

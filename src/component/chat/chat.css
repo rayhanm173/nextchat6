@@ -1,0 +1,15 @@
+.chat{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+@media(max-width: 1024px){
+    .chat{
+    justify-content: center;
+    width: 100%;
+    }
+}
