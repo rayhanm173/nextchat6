@@ -1,5 +1,6 @@
 @media (min-width:1025px) {
    .sendmessage{
+      position: relative;
       height: 200px;
        padding-inline: 20px;
        padding-bottom: 20px;
@@ -17,6 +18,11 @@
         gap: 20px;
         align-items: center;
    
+
+         
+
+
+
         img{
            width: 20px;
            height: 20px;
@@ -79,7 +85,7 @@
    }
    .flashtext{
       position: absolute;
-      top: 0;
+      top: 8px;
    }
    input{
       background-color: rgba(17, 25, 40, 0.5);
@@ -102,7 +108,7 @@
      }
      .recordwrapper{
       position: absolute;
-      top: 0;
+      top: 8px;
      }
 }
 
@@ -156,7 +162,8 @@
 }
 
 .preview{
-   position: fixed;
+   position: absolute;
+   top: -200px;
 }
 
 .closebutton{
@@ -250,17 +257,18 @@
 .audiocontrol{
    padding-left: 53px;
    width: 217px;
-   height: 40px;
+   height: 32px;
 }
 
 .discardbtn{
    width: 70px;
    height: 25px;
    font-size: 15px;
+   padding: 15px 45px;
 }
 
 .discarddiv{
-   padding-left: 45px;
+   padding-left: 10px;
 }
 
 .recordwrapper{
@@ -273,6 +281,29 @@
 
 
 }
+
+@media (min-width:1024px) {
+   .preview{
+      position: absolute;
+      top: -299px;
+      border-radius: 12px;
+   }
+}
+
+
+.preview{
+   border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
 
    /* .imgicon{
       position: absolute;
