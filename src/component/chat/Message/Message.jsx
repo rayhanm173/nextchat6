@@ -25,7 +25,7 @@ export default function Message({message}) {
             </div>
             </div>
             <div className="elapsedtime">
-                <p>{moment(dateObj).fromNow()}</p>
+                <p className="ago">{moment(dateObj).fromNow()}</p>
             </div>
        </div>
        </div>

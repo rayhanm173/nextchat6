@@ -13,7 +13,7 @@ export default function UserInfo() {
                 <div>
                     <Image src={session.user.image} alt="image" width={45} height={45} className="userimg"/>
                 </div>
-                <div className="text-[20px] font-normal">{session?.user?.name}</div>
+                <div className="text-[20px] font-normal">{capitalizeFirstLetter(session?.user?.name)}</div>
               </div>
               <div className="flex align-middle flex-row justify-center">
               <button onClick={()=>signOut()}>Logout</button>
@@ -21,4 +21,12 @@ export default function UserInfo() {
             </div>
        </div>
    )
+}
+
+function capitalizeFirstLetter(string) {
+const words = string.split(" ");
+
+return words.map((word) => { 
+    return word[0].toUpperCase() + word.substring(1); 
+}).join(" ");
 }

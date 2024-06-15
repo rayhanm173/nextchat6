@@ -1,64 +1,117 @@
-.sendmessage{
-    padding-inline: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center; 
-    justify-content: center;
-    border-top: 1px solid #dddddd35;
-    gap: 20px;
-    margin-top: auto;
-
-    .icons{
-     display: flex;
-     gap: 20px;
-     align-items: center;
-
-     img{
-        width: 20px;
-        height: 20px;
-        cursor: pointer; 
+@media (min-width:1025px) {
+   .sendmessage{
+      height: 200px;
+       padding-inline: 20px;
+       padding-bottom: 20px;
+       display: flex;
+       flex-direction: column;
+       flex: 1;
+       align-items: center; 
+       justify-content: center;
+       border-top: 1px solid #dddddd35;
+       gap: 20px;
+       margin-top: auto;
+   
+       .icons{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+   
+        img{
+           width: 20px;
+           height: 20px;
+           cursor: pointer; 
+        }
+       }
+   
+       input{
+        flex:1;
+        background-color: rgba(17, 25, 40, 0.5);
+        border: none;
+        outline: none;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 16px;
+       }
+       
+       .emoji{
+            position: relative;}
+   
+            .picker{
+                position: absolute;
+                bottom: 50px;
+                right: 0;
+            }
+       
+   
+       .sendButton{
+        background-color: #5183fe;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+   
+       .discardbtn{
+         width: 90px;
+         height: 35px;
+         font-size: 15px;
+         background-color: #5183fe;
+       }
+    }
+}
+/* from here */
+@media (max-width:1024px) {
+   .sendmessage{
+      /* height: 200px; */
+      min-width: 100%;
+      padding-bottom: 100px;
+      padding-top: 42px;
+      border-top: 1px solid #dddddd35;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+   }
+   .flashtext{
+      position: absolute;
+      top: 0;
+   }
+   input{
+      background-color: rgba(17, 25, 40, 0.5);
+      border: none;
+      outline: none;
+      color: white;
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 16px;
+      height: 10px;
      }
-    }
 
-    input{
-     flex:1;
-     background-color: rgba(17, 25, 40, 0.5);
-     border: none;
-     outline: none;
-     color: white;
-     padding: 20px;
-     border-radius: 10px;
-     font-size: 16px;
-    }
-    
-    .emoji{
-         position: relative;}
+     .imgicon{
+      width: 25px;
+     }
+     .icons{
+      align-items: center;
+      gap: 7px !important;
+      margin-right: 5px;
+     }
+     .recordwrapper{
+      position: absolute;
+      top: 0;
+     }
+}
 
-         .picker{
-             position: absolute;
-             bottom: 50px;
-             right: 0;
-         }
-    
+/* to here */
 
-    .sendButton{
-     background-color: #5183fe;
-     color: white;
-     padding: 10px 20px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-    }
 
-    .discardbtn{
-      width: 90px;
-      height: 35px;
-      font-size: 15px;
-      background-color: #5183fe;
-    }
- }
+
+
+
 
  .sendmsgwrapper{
     display: flex;
@@ -103,7 +156,7 @@
 }
 
 .preview{
-   position: relative;
+   position: fixed;
 }
 
 .closebutton{
@@ -122,17 +175,19 @@
    animation:  animate 2.5s linear infinite;
 }
 
-@keyframes animate{
-   0%{
-      opacity: 0;
-   }
-   50%{
-      opacity: 0.7;
-   }
-   100%{
-      opacity: 0;
-   }
+.flashmic{
+   animation-name: fade;
+   animation-duration: 0.2s;
+   animation-iteration-count: 1;
 }
+
+
+
+@keyframes fade {
+   0%{display: block;}
+   100%{display: none;}
+}
+
 
 .redcircle{
    width: 10px;
@@ -145,7 +200,10 @@
 
 
 @media screen and (max-width:1024px){
- 
+   .wrapper{
+      padding-bottom: 20px;
+      border-radius: 0;
+   }
 
    .sendmsgwrapper{
       display: flex;
@@ -154,8 +212,9 @@
       gap: 4px;
 
       input{
-         width: 180px;
-         height: 55px;
+         width: 170px;
+         /* height: 55px; */
+         padding:20px 5px;
       }
    }
 
@@ -172,7 +231,7 @@
    }
    .picker{
       position: absolute;
-      bottom: 140px !important;
+      bottom: 112px !important;
       left: -230px !important;
       /* width: 600px; */
    }
@@ -206,6 +265,10 @@
 
 .recordwrapper{
    gap: 0px;
+}
+
+.epr-category-nav{
+   display: none !important;
 }
 
 
